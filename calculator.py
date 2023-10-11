@@ -1,15 +1,19 @@
- def add(x, y):  
+ class Calculator: #Calculator
+
+
+@statucmethod
+def add(x, y):  
     return x + y
     
-  
+@statucmethod  
 def subtract(x, y):
     return x - y
 
-   
+@statucmethod   
 def multiply(x, y):
     return x * y
 
-
+@statucmethod
 def divide(x, y):
     if y == 0:
         return "0으로 나눌 수 없습니다."
