@@ -1,12 +1,18 @@
+class Calculator: # Calculator
+
+@staticmethod    
 def add(x, y):  
     return x + y
-
+    
+@staticmethod    
 def subtract(x, y):
     return x - y
 
+@staticmethod    
 def multiply(x, y):
     return x * y
 
+@staticmethod    
 def divide(x, y):
     if y == 0:
         return "0으로 나눌 수 없습니다."
