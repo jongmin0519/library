@@ -1,4 +1,4 @@
- class Calculator: #사칙연산 계산기
+ class Calculator: #사칙연산 계산
 
 
 @statucmethod
