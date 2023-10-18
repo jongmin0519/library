@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>커리어 컨설팅 봇</title>
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flashes">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <form action="/" method="post">
+        <label for="user_input">당신의 관심 분야, 경험, 능력 등을 입력하세요:</label><br>
+        <textarea name="user_input" id="user_input" rows="5" cols="50">{{ request.form['user_input'] }}</textarea><br>
+        <input type="submit" value="조언 받기">
+    </form>
+
+    {% if request.method == 'POST' %}
+        <h2>봇의 조언</h2>
+        <p>{{ response }}</p>
+    {% endif %}
+</body>
+</html>
