@@ -5,7 +5,7 @@ app = Flask(__name__)
 app.secret_key = 'hi123'
 
 # OpenAI API 키를 설정합니다.
-openai.api_key = "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"  # 여기에 자신의 API 키를 넣어주세요.
+openai.api_key = ""  # 여기에 자신의 API 키를 넣어주세요.
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
